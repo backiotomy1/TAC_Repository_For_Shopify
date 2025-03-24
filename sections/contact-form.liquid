@@ -12,7 +12,7 @@
                         {% render 'icon-failed' %}
                     </div>
                     <div class="text-sm font-medium ml-3">
-                        Oh no! Your message is not sent
+                        Issue posting your comment.
                     </div>
                 </div>
                 <ul class="px-4 mb-3 ml-7 list-decimal">
@@ -28,7 +28,7 @@
                 <div class="text-green-500">
                     {% render 'icon-success' %}
                 </div>
-                <div class="text-sm font-medium ml-3">Your message is sent successfully</div>
+                <div class="text-sm font-medium ml-3">Posted successfully</div>
             </div>
         {% endif %}
 
@@ -39,7 +39,7 @@
                     <input class="border py-3 px-4 mb-3 text-gray-700 w-full" type="text" name="contact[name]" id="contact_name">
                 </div>
                 <div class="px-3 md:w-1/2">
-                    <label class="uppercase text-xs text-gray-500 font-medium" for="contact_email">Email address</label>
+                    <label class="uppercase text-xs text-gray-500 font-medium" for="contact_email">Email</label>
                     <input class="border py-3 px-4 mb-3 text-gray-700 w-full" type="email" name="contact[email]" id="contact_email">
                 </div>
             </div>
@@ -53,7 +53,7 @@
 
             <div class="flex px-1 mb-3">
                 <div class="w-full px-3">
-                    <input type="submit" class="w-full cursor-pointer px-4 py-2 border text-base font-medium bg-gray-900 text-white hover:bg-gray-700" value="Submit message">
+                    <input type="submit" class="w-full cursor-pointer px-4 py-2 border text-base font-medium bg-gray-900 text-white hover:bg-gray-700" value="Submit">
                 </div>
             </div>
         </div>        
