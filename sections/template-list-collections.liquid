@@ -1,0 +1,52 @@
+<div class="my-8">
+  <h1 class="text-3xl font-medium text-center">{{ section.settings.title }}</h1>
+
+  <!-- Outer container for the grid -->
+  <div class="max-w-6xl mx-auto mt-6">
+    <!-- Responsive grid: 1 column on small screens, 3 columns on md+ screens -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      {% for collection in collections %}
+        {% if collection.all_products_count > 0 %}
+          <div class="border bg-white overflow-hidden">
+            <a href="{{ collection.url }}">
+              <div class="h-80 overflow-hidden">
+                {% if collection.featured_image != blank %}
+                  {% assign collection_image = collection.featured_image %}
+                {% else %}
+                  {% assign collection_image = collection.products.first.image %}
+                {% endif %}
+                {% if collection_image %}
+                  <img
+                    class="w-full h-full object-cover transition duration-1000 ease-in-out transform hover:scale-105"
+                    src="{{ collection_image | img_url: 'medium' }}"
+                    alt="{{ collection.title | escape }}"
+                  >
+                {% else %}
+                  {{ 'placeholder-image' | placeholder_svg_tag: 'w-full h-full object-cover bg-gray-100' }}
+                {% endif %}
+              </div>
+            </a>
+            <!-- Collection title section with white background -->
+            <div class="p-4 bg-white">
+              <h1 class="text-xl">{{ collection.title }}</h1>
+            </div>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Template List Collections",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "default": "Collections",
+      "label": "Title"
+    }
+  ]
+}
+{% endschema %}

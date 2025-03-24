@@ -1,5 +1,4 @@
 {% assign main_menu_linklist = linklists[section.settings.menu].links %}
-Yo Big Dogs!
 <header class="relative bg-white" x-data="{ mobileMenuOpen: false }">
   <div class="mx-auto px-4 sm:px-6">
     <div class="flex justify-between items-center py-6 md:justify-start md:space-x-10">
@@ -11,11 +10,11 @@ Yo Big Dogs!
       <!-- MOBILE NAVIGATION BUTTON -->
       <div class="-mr-2 -my-2 ml-3 md:hidden">
         <button
-            type="button"
-            class="bg-white p-2 inline-flex items-center justify-center focus:outline-none"
-            @click="mobileMenuOpen = !mobileMenuOpen"
+          type="button"
+          class="bg-white p-2 inline-flex items-center justify-center focus:outline-none"
+          @click="mobileMenuOpen = !mobileMenuOpen"
         >
-            {% render 'icon-menu' %}
+          {% render 'icon-menu' %}
         </button>
       </div>
  
@@ -39,7 +38,7 @@ Yo Big Dogs!
                       <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
                         {% for sublink in link.links %}
                             <a
-                                class="-m-3 p-3 flex items start rounded-lg hover:bg-gray-100"
+                                class="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-100"
                                 href="{{ sublink.url }}"
                             >
                               <div class="ml-4">
@@ -57,7 +56,7 @@ Yo Big Dogs!
                 <div class="relative">
                     <a
                         href="{{ link.url }}"
-                        class="text-base text-gray-500 {% if link.active %}text-red-400{% else %}hover:text-gray-900{% endif %}"
+                        class="text-base text-gray-500 {% if link.active %}text-green-600{% else %}hover:text-gray-900{% endif %}"
                     >
                         {{ link.title }}
                     </a>
