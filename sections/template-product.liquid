@@ -9,7 +9,7 @@
 <style>
     .swiper-button-prev, .swiper-button-next { color: black; top: auto !important; height: 20px; }
     .swiper-button-prev::after, .swiper-button-next::after { font-size: 20px; }
-    .swiper-pagination { color: black; position: static !important;}
+    .swiper-pagination { color: black; position: static !important; }
     .swiper-pagination-bullet-active { background: black !important; }
     .product--information { height: fit-content; }
 </style>
@@ -59,7 +59,8 @@
                                 </div>
                             {% when 'title' %}
                                 <div class="my-3">
-                                    <h1 class="text-3xl text-gray-900">{{ product.title }}</h1>
+                                    <!-- Added page-title class for Oswald styling -->
+                                    <h1 class="page-title text-3xl text-gray-900">{{ product.title }}</h1>
                                 </div>
                             {% when 'price' %}
                                 <div class="my-3" id="price-{{ section.id }}">
