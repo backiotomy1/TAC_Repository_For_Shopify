@@ -1,5 +1,5 @@
 <div class="my-8">
-  <h1 class="text-3xl font-medium text-center">{{ section.settings.title }}</h1>
+  <h1 class="page-title text-3xl font-medium text-center">{{ section.settings.title }}</h1>
 
   <!-- Outer container for the grid -->
   <div class="max-w-6xl mx-auto mt-6">
@@ -16,11 +16,7 @@
                   {% assign collection_image = collection.products.first.image %}
                 {% endif %}
                 {% if collection_image %}
-                  <img
-                    class="w-full h-full object-cover transition duration-1000 ease-in-out transform hover:scale-105"
-                    src="{{ collection_image | img_url: 'medium' }}"
-                    alt="{{ collection.title | escape }}"
-                  >
+                  <img class="w-full h-full object-cover transition duration-1000 ease-in-out transform hover:scale-105" src="{{ collection_image | img_url: 'medium' }}" alt="{{ collection.title | escape }}">
                 {% else %}
                   {{ 'placeholder-image' | placeholder_svg_tag: 'w-full h-full object-cover bg-gray-100' }}
                 {% endif %}
