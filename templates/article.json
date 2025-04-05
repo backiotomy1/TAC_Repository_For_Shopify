@@ -16,20 +16,6 @@
           "type": "featured_image",
           "settings": {}
         },
-        "title": {
-          "type": "article_title",
-          "disabled": true,
-          "settings": {}
-        },
-        "author": {
-          "type": "article_author",
-          "disabled": true,
-          "settings": {}
-        },
-        "published_date": {
-          "type": "article_published_date",
-          "settings": {}
-        },
         "content": {
           "type": "article_content",
           "settings": {}
@@ -37,9 +23,6 @@
       },
       "block_order": [
         "thumbnail",
-        "title",
-        "author",
-        "published_date",
         "content"
       ],
       "settings": {
